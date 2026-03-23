@@ -29,10 +29,8 @@ RECIPIENT_EMAIL=you@wherever.com
 ## Usage
 
 ```bash
-python3 Algent.py --test     # test (no email)
-python3 Algent.py --force    # force send
-python3 Algent.py --no-email # save HTML locally
-cat logs/digest.log          # check logs
+bash SetUp.sh
+cat logs/digest.log   # check logs
 ```
 
 ---
