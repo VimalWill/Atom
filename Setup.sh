@@ -44,11 +44,11 @@ echo "📦 Creating virtual environment..."
 python3 -m venv "$VENV_DIR"
 source "$VENV_DIR/bin/activate"
 
-# Step 2: Install dependencies (only arxiv needed now!)
+# Step 2: Install dependencies
 echo ""
 echo "📥 Installing dependencies..."
 pip install --upgrade pip
-pip install arxiv
+pip install -r "$SCRIPT_DIR/Requirements.txt"
 
 # Step 3: Create logs directory
 mkdir -p "$SCRIPT_DIR/logs"
@@ -151,8 +151,8 @@ elif [[ "$OS" == "linux" ]]; then
     cat > "$DESKTOP_DEST" << DESKTOP
 [Desktop Entry]
 Type=Application
-Name=AI Research Digest
-Comment=Daily AI research paper digest
+Name=Atom — AI Research Digest
+Comment=Daily AI research digest by Atom
 Exec=$SCRIPT_DIR/run_digest.sh
 Terminal=false
 Hidden=false
