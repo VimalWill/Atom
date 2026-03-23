@@ -3,3 +3,5 @@ logs
 .last_run
 *.html
 .seen_papers.json
+venv
+.venv
